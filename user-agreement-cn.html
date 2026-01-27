@@ -7,34 +7,55 @@
     <style>
         * { margin: 0; padding: 0; box-sizing: border-box; }
         body {
-            font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif;
-            line-height: 1.6; color: #333; background: #f5f5f5; padding: 20px 0;
+            font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, "PingFang SC", "Microsoft YaHei", sans-serif;
+            line-height: 1.8; color: #333; background: #f5f5f5; padding: 20px;
         }
         .container {
             max-width: 900px; margin: 0 auto; background: white;
             box-shadow: 0 2px 8px rgba(0,0,0,0.1); position: relative;
         }
         .lang-switch {
-            position: absolute; top: 15px; right: 15px; z-index: 100;
+            position: absolute; top: 20px; right: 20px; z-index: 100;
         }
         .lang-switch a {
-            color: rgba(255, 255, 255, 0.85); text-decoration: none;
-            padding: 4px 12px; border: 1px solid rgba(255, 255, 255, 0.4);
-            border-radius: 4px; font-size: 12px; transition: all 0.3s;
-            background: rgba(0, 0, 0, 0.15);
+            color: rgba(255, 255, 255, 0.9); text-decoration: none;
+            padding: 6px 16px; border: 1px solid rgba(255, 255, 255, 0.5);
+            border-radius: 4px; font-size: 13px; transition: all 0.3s;
+            background: rgba(0, 0, 0, 0.2);
         }
         .lang-switch a:hover { background: white; color: #667eea; border-color: white; }
         header {
             background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
-            color: white; padding: 40px 30px; text-align: center;
+            color: white; padding: 50px 30px; text-align: center;
         }
-        header h1 { font-size: 28px; margin-bottom: 5px; }
-        .last-updated { font-size: 13px; opacity: 0.8; }
-        .content { padding: 30px; font-size: 14px; color: #444; }
-        h2 { font-size: 18px; color: #333; margin: 25px 0 10px; font-weight: bold; border-left: 4px solid #667eea; padding-left: 10px; }
-        p { margin: 10px 0; text-align: justify; }
-        footer { background: #f8f9fa; padding: 20px; text-align: center; border-top: 1px solid #e0e0e0; font-size: 13px; }
+        header h1 { font-size: 32px; margin-bottom: 10px; font-weight: 600; }
+        .last-updated { font-size: 14px; opacity: 0.9; }
+        .content { padding: 40px; font-size: 15px; color: #444; }
+        h2 { 
+            font-size: 20px; color: #333; margin: 35px 0 15px; 
+            font-weight: 600; border-left: 5px solid #667eea; 
+            padding-left: 15px; background: #f8f9ff; padding-top: 8px; padding-bottom: 8px;
+        }
+        h3 {
+            font-size: 17px; color: #444; margin: 25px 0 12px;
+            font-weight: 600; border-left: 3px solid #764ba2;
+            padding-left: 12px;
+        }
+        p { margin: 12px 0; line-height: 1.8; }
+        ul { margin: 15px 0; padding-left: 30px; }
+        li { margin: 8px 0; line-height: 1.8; }
+        footer { 
+            background: #f8f9fa; padding: 25px; text-align: center; 
+            border-top: 1px solid #e0e0e0; font-size: 14px; color: #666;
+        }
         footer a { color: #667eea; text-decoration: none; margin: 0 10px; }
+        footer a:hover { text-decoration: underline; }
+        .strong { font-weight: 600; color: #333; }
+        @media (max-width: 768px) {
+            body { padding: 10px; }
+            .content { padding: 25px 20px; }
+            header h1 { font-size: 26px; }
+        }
     </style>
 </head>
 <body>
@@ -47,22 +68,54 @@
             <p class="last-updated">更新日期：2025年6月2日</p>
         </header>
         <div class="content">
-            <p style="font-weight: bold; font-size: 16px; margin-bottom: 20px; text-align: center;">威尔派科技有限公司用户服务协议</p>
-            
-            <p>我们致力于保护您在使用我们APP时所提供的私隐、私人资料以及个人的资料(统称“个人资料”)，使我们在收集、使用、储存和传送个人资料方面符合(与个人资料私隐有关的法律法规)及消费者保护方面的最高标准。为确保您对我们在处理个人资料上有充分信心，您切要详细阅读及理解隐私政策的条文。</p>
+            <p>我们致力于保护您在使用我们APP时所提供的私隐、私人资料以及个人的资料(统称"个人资料")，使我们在收集、使用、储存和传送个人资料方面符合(与个人资料私隐有关的法律法规)及消费者保护方面的最高标准。为确保您对我们在处理个人资料上有充分信心，您切要详细阅读及理解隐私政策的条文。</p>
 
-            <p>特别是您一旦使用我们的APP，将被视为接受、同意，承诺和确认:您在自愿下连同所需的同意向我们披露个人资料:您会遵守本隐私政策的全部条款和限制:您在我们的APP上作登记、资料会被收集:您同意日后我们对隐私政策的任何修改:您同意我们的分公司、附属公司、雇员、就您可能会感兴趣的产品和服务与您联络(除非您已经表示不想收到该等讯息)。被收集的个人资料的种类经您的同意，我们会收集、管理和监控个人资料。</p>
+            <p>特别是您一旦使用我们的APP，将被视为接受、同意，承诺和确认:您在自愿下连同所需的同意向我们披露个人资料:您会遵守本隐私政策的全部条款和限制:您在我们的APP上作登记、资料会被收集：您同意日后我们对隐私政策的任何修改: 您同意我们的分公司、附属公司、雇员、就您可能会感兴趣的产品和服务与您联络(除非您已经表示不想收到该等讯息)。被收集的个人资料的种类经您的同意，我们会收集、管理和监控个人资料。</p>
 
-            <p>收集个人资料及不具名的资料的目的及用途如下:<br>
-            通过我们的APP向您提供我们的各项服务:当你使用我们的APP时，能辨认以及确认您的身份:让您使用我们的APP时得到为您而设的服务:我们的顾客服务人员有需要时可以与您联系:统计我们APP使用量的数据;让您在使用我们APP时更方便;为改进我们的产品、服务及APP内容而进行市场研究调查:为我们搞的活动、市场销售和推广计划收集资料:遵守法律、政府和监管机关的规定，包括但不限于对个人资料披露及通知的规定:就我们提供的各项服务、分析、核对或审查您的信用、付款或地位:处理在您要求下的任何付款指示。直接扣帐或信用安排:使您能运作您的账户以及使我们能从账户支取尚欠的服务费:您提供给我们的个人资料及不具名资料只保留到搜集的目的已达到的时候，除非应适用的法律法规之规定而继续保留。</p>
+            <h2>一、收集个人资料的目的及用途</h2>
+            <p>收集个人资料及不具名的资料的目的及用途如下:</p>
+            <ul>
+                <li>1.1 通过我们的APP向您提供我们的各项服务</li>
+                <li>1.2 当你使用我们的APP时，能辨认以及确认您的身份</li>
+                <li>1.3 让您使用我们的APP时得到为您而设的服务</li>
+                <li>1.4 我们的顾客服务人员有需要时可以与您联系</li>
+                <li>1.5 统计我们APP使用量的数据</li>
+                <li>1.6 让您在使用我们APP时更方便</li>
+                <li>1.7 为改进我们的产品、服务及APP内容而进行市场研究调查</li>
+                <li>1.8 为我们搞的活动、市场销售和推广计划收集资料</li>
+                <li>1.9 遵守法律、政府和监管机关的规定，包括但不限于对个人资料披露及通知的规定</li>
+                <li>1.10 就我们提供的各项服务、分析、核对或审查您的信用、付款或地位</li>
+                <li>1.11 处理在您要求下的任何付款指示。直接扣帐或信用安排</li>
+                <li>1.12 使您能运作您的账户以及使我们能从账户支取尚欠的服务费</li>
+            </ul>
+            <p>您提供给我们的个人资料及不具名资料只保留到搜集的目的已达到的时候，除非应适用的法律法规之规定而继续保留。</p>
 
-            <p>个人资料的拥有权及披露:<br>
-            在我们APP上所搜集的一切资料都由我们所拥有，不会出租或出售给任何无关的第三方。</p>
+            <h2>二、个人资料的拥有权及披露</h2>
+            <p>在我们 APP 上所搜集的一切资料都由我们所拥有，不会出租或出售给任何无关的第三方。</p>
 
-            <p>您有权:查询我们是否持有您的任何个人资料:接达我们所持有的您的个人资料:要求我们更正任何不正确的个人资料:不时地征询有关我们所持有的个人资料的性质，政策和执行方法:然而在法律允许的极端有限的情况下，我们可以不允许您接达您的个人资料，例如:如您接达及得到您个人资料可能会对您有危险:当您的个人资料可能会影响一项正在进行的调查:当您的个人资料涉及到法庭程序,并且可能受到发现的限制;当您的个人资料涉及一项商业上敏感的决策过程:当另外一个人的个人资料也包含在同一份记录中:若您欲接达或更正个人资料。或索取有关个人资料的政策、执行方法和被持有的个人资料的种类，应致函到我们的下列的地址:要求接达或更正资料可能要付合理的处理费用:安全保管您的密码，除了我们致力确保您的个人资料存放和处理的安全外，您不应向任何人披露您的登录密码或帐户资料，以保护您的个人资料。</p>
+            <h2>三、您的权利</h2>
+            <p>您有权:</p>
+            <ul>
+                <li>3.1 查询我们是否持有您的任何个人资料</li>
+                <li>3.2 接达我们所持有的您的个人资料</li>
+                <li>3.3 要求我们更正任何不正确的个人资料</li>
+                <li>3.4 不时地征询有关我们所持有的个人资料的性质，政策和执行方法</li>
+            </ul>
 
+            <p>然而在法律允许的极端有限的情况下，我们可以不允许您接达您的个人资料，例如:</p>
+            <ul>
+                <li>(1) 如您接达及得到您个人资料可能会对您有危险</li>
+                <li>(2) 当您的个人资料可能会影响一项正在进行的调查</li>
+                <li>(3) 当您的个人资料涉及到法庭程序,并且可能受到发现的限制</li>
+                <li>(4) 当您的个人资料涉及一项商业上敏感的决策过程</li>
+                <li>(5) 当另外一个人的个人资料也包含在同一份记录中</li>
+            </ul>
+
+            <p>若您欲接达或更正个人资料，或索取有关个人资料的政策、执行方法和被持有的个人资料的种类，应致函到我们的下列的地址。要求接达或更正资料可能要付合理的处理费用。</p>
+
+            <h2>四、安全保管您的密码</h2>
+            <p>除了我们致力确保您的个人资料存放和处理的安全外，您不应向任何人披露您的登录密码或帐户资料，以保护您的个人资料。</p>
             <p>每当您登录我们APP时，尤其是当您使用他人的手机或者是公共的互联网终端机时，请记着操作完毕后一定要点击退出。</p>
-
             <p>您的努力和协助对于我们保护您的个人资料绝对有帮助。</p>
         </div>
         <footer>
@@ -72,6 +125,6 @@
                 <a href="privacy-policy-cn.html">隐私政策</a>
             </p>
         </footer>
-</div>
+    </div>
 </body>
 </html>

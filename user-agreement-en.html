@@ -8,33 +8,54 @@
         * { margin: 0; padding: 0; box-sizing: border-box; }
         body {
             font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif;
-            line-height: 1.6; color: #333; background: #f5f5f5; padding: 20px 0;
+            line-height: 1.8; color: #333; background: #f5f5f5; padding: 20px;
         }
         .container {
             max-width: 900px; margin: 0 auto; background: white;
             box-shadow: 0 2px 8px rgba(0,0,0,0.1); position: relative;
         }
         .lang-switch {
-            position: absolute; top: 15px; right: 15px; z-index: 100;
+            position: absolute; top: 20px; right: 20px; z-index: 100;
         }
         .lang-switch a {
-            color: rgba(255, 255, 255, 0.85); text-decoration: none;
-            padding: 4px 12px; border: 1px solid rgba(255, 255, 255, 0.4);
-            border-radius: 4px; font-size: 12px; transition: all 0.3s;
-            background: rgba(0, 0, 0, 0.15);
+            color: rgba(255, 255, 255, 0.9); text-decoration: none;
+            padding: 6px 16px; border: 1px solid rgba(255, 255, 255, 0.5);
+            border-radius: 4px; font-size: 13px; transition: all 0.3s;
+            background: rgba(0, 0, 0, 0.2);
         }
         .lang-switch a:hover { background: white; color: #667eea; border-color: white; }
         header {
             background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
-            color: white; padding: 40px 30px; text-align: center;
+            color: white; padding: 50px 30px; text-align: center;
         }
-        header h1 { font-size: 28px; margin-bottom: 5px; }
-        .last-updated { font-size: 13px; opacity: 0.8; }
-        .content { padding: 30px; font-size: 14px; color: #444; }
-        h2 { font-size: 18px; color: #333; margin: 25px 0 10px; font-weight: bold; border-left: 4px solid #667eea; padding-left: 10px; }
-        p { margin: 10px 0; text-align: justify; }
-        footer { background: #f8f9fa; padding: 20px; text-align: center; border-top: 1px solid #e0e0e0; font-size: 13px; }
+        header h1 { font-size: 32px; margin-bottom: 10px; font-weight: 600; }
+        .last-updated { font-size: 14px; opacity: 0.9; }
+        .content { padding: 40px; font-size: 15px; color: #444; }
+        h2 { 
+            font-size: 20px; color: #333; margin: 35px 0 15px; 
+            font-weight: 600; border-left: 5px solid #667eea; 
+            padding-left: 15px; background: #f8f9ff; padding-top: 8px; padding-bottom: 8px;
+        }
+        h3 {
+            font-size: 17px; color: #444; margin: 25px 0 12px;
+            font-weight: 600; border-left: 3px solid #764ba2;
+            padding-left: 12px;
+        }
+        p { margin: 12px 0; line-height: 1.8; }
+        ul { margin: 15px 0; padding-left: 30px; }
+        li { margin: 8px 0; line-height: 1.8; }
+        footer { 
+            background: #f8f9fa; padding: 25px; text-align: center; 
+            border-top: 1px solid #e0e0e0; font-size: 14px; color: #666;
+        }
         footer a { color: #667eea; text-decoration: none; margin: 0 10px; }
+        footer a:hover { text-decoration: underline; }
+        .strong { font-weight: 600; color: #333; }
+        @media (max-width: 768px) {
+            body { padding: 10px; }
+            .content { padding: 25px 20px; }
+            header h1 { font-size: 26px; }
+        }
     </style>
 </head>
 <body>
@@ -47,24 +68,54 @@
             <p class="last-updated">Updated: June 2, 2025</p>
         </header>
         <div class="content">
-            <p style="font-weight: bold; font-size: 16px; margin-bottom: 20px; text-align: center;">VIP Technology Co., Ltd. User Service Agreement</p>
-            
             <p>We are committed to protecting the privacy, private information and personal data (collectively "Personal Data") you provide when using our APP, ensuring that we meet the highest standards in the collection, use, storage and transmission of personal data in terms of laws and regulations related to personal data privacy and consumer protection. To ensure that you have full confidence in our handling of personal data, you must read and understand the terms of the privacy policy in detail.</p>
 
-            <p>In particular, once you use our APP, you will be deemed to accept, agree, undertake and confirm that: You voluntarily disclose personal data to us along with the required consent: You will comply with all the terms and restrictions of this privacy policy: Your registration and data on our APP will be collected: You agree to any future modifications we make to the privacy policy: You agree that our branches, affiliates, and employees may contact you regarding products and services that may be of interest to you (unless you have indicated that you do not wish to receive such information). Types of personal data collected With your consent, we will collect, manage and monitor personal data.</p>
+            <p>In particular, once you use our APP, you will be deemed to accept, agree, undertake and confirm that: You voluntarily disclose personal data to us along with the required consent; You will comply with all the terms and restrictions of this privacy policy; Your registration and data on our APP will be collected; You agree to any future modifications we make to the privacy policy; You agree that our branches, affiliates, and employees may contact you regarding products and services that may be of interest to you (unless you have indicated that you do not wish to receive such information). With your consent, we will collect, manage and monitor personal data.</p>
 
-            <p>The purposes and uses of collecting personal data and anonymous data are as follows:<br>
-            To provide you with our various services through our APP: To identify and confirm your identity when you use our APP: To enable you to receive customized services when using our APP: To enable our customer service staff to contact you when necessary: To count data on the usage of our APP; To make your use of our APP more convenient; To conduct market research to improve our products, services and APP content: To collect data for our activities, marketing and promotional plans: To comply with laws, government and regulatory requirements, including but not limited to requirements for disclosure and notification of personal data: To analyze, verify or review your credit, payment or status for the various services we provide: To process any payment instructions at your request. Direct debit or credit arrangements: To enable you to operate your account and enable us to deduct outstanding service fees from the account: The personal data and anonymous data you provide to us will only be retained until the purpose of collection is achieved, unless continued retention is required by applicable laws and regulations.</p>
+            <h2>1. Purpose of Collecting Personal Data</h2>
+            <p>The purposes and uses of collecting personal data and anonymous data are as follows:</p>
+            <ul>
+                <li>1.1 To provide you with our various services through our APP</li>
+                <li>1.2 To identify and confirm your identity when you use our APP</li>
+                <li>1.3 To enable you to receive customized services when using our APP</li>
+                <li>1.4 To enable our customer service staff to contact you when necessary</li>
+                <li>1.5 To count data on the usage of our APP</li>
+                <li>1.6 To make your use of our APP more convenient</li>
+                <li>1.7 To conduct market research to improve our products, services and APP content</li>
+                <li>1.8 To collect data for our activities, marketing and promotional plans</li>
+                <li>1.9 To comply with laws, government and regulatory requirements</li>
+                <li>1.10 To analyze, verify or review your credit, payment or status for the various services we provide</li>
+                <li>1.11 To process any payment instructions at your request</li>
+                <li>1.12 To enable you to operate your account and enable us to deduct outstanding service fees from the account</li>
+            </ul>
+            <p>The personal data and anonymous data you provide to us will only be retained until the purpose of collection is achieved, unless continued retention is required by applicable laws and regulations.</p>
 
-            <p>Ownership and disclosure of personal data:<br>
-            All data collected on our APP is owned by us and will not be rented or sold to any unrelated third parties.</p>
+            <h2>2. Ownership and Disclosure of Personal Data</h2>
+            <p>All data collected on our APP is owned by us and will not be rented or sold to any unrelated third parties.</p>
 
-            <p>You have the right to: Inquire whether we hold any of your personal data: Access your personal data held by us: Request us to correct any incorrect personal data: From time to time inquire about the nature, policies and implementation methods of the personal data held by us: However, in extremely limited circumstances permitted by law, we may not allow you to access your personal data, such as: If your access to and obtaining your personal data may be dangerous to you: When your personal data may affect an ongoing investigation: When your personal data involves court proceedings and may be subject to discovery limitations; When your personal data involves a commercially sensitive decision-making process: When another person's personal data is also included in the same record: If you wish to access or correct personal data. Or to obtain information about policies, implementation methods and types of personal data held, you should write to the following address: Requests to access or correct data may require a reasonable processing fee:</p>
+            <h2>3. Your Rights</h2>
+            <p>You have the right to:</p>
+            <ul>
+                <li>3.1 Inquire whether we hold any of your personal data</li>
+                <li>3.2 Access your personal data held by us</li>
+                <li>3.3 Request us to correct any incorrect personal data</li>
+                <li>3.4 From time to time inquire about the nature, policies and implementation methods of the personal data held by us</li>
+            </ul>
 
-            <p>Keep your password secure. In addition to our commitment to ensuring the security of storage and processing of your personal data, you should not disclose your login password or account information to anyone to protect your personal data.</p>
+            <p>However, in extremely limited circumstances permitted by law, we may not allow you to access your personal data, such as:</p>
+            <ul>
+                <li>(1) If your access to your personal data may be dangerous to you</li>
+                <li>(2) When your personal data may affect an ongoing investigation</li>
+                <li>(3) When your personal data involves court proceedings</li>
+                <li>(4) When your personal data involves a commercially sensitive decision-making process</li>
+                <li>(5) When another person's personal data is also included in the same record</li>
+            </ul>
 
+            <p>If you wish to access or correct personal data, or obtain information about policies and types of personal data held, you should write to us. Requests to access or correct data may require a reasonable processing fee.</p>
+
+            <h2>4. Keep Your Password Secure</h2>
+            <p>In addition to our commitment to ensuring the security of storage and processing of your personal data, you should not disclose your login password or account information to anyone to protect your personal data.</p>
             <p>Whenever you log in to our APP, especially when you use someone else's mobile phone or a public internet terminal, remember to click logout after you finish.</p>
-
             <p>Your efforts and assistance are absolutely helpful for us to protect your personal data.</p>
         </div>
         <footer>

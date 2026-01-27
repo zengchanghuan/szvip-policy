@@ -8,33 +8,63 @@
         * { margin: 0; padding: 0; box-sizing: border-box; }
         body {
             font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif;
-            line-height: 1.6; color: #333; background: #f5f5f5; padding: 20px 0;
+            line-height: 1.8; color: #333; background: #f5f5f5; padding: 20px;
         }
         .container {
             max-width: 900px; margin: 0 auto; background: white;
             box-shadow: 0 2px 8px rgba(0,0,0,0.1); position: relative;
         }
         .lang-switch {
-            position: absolute; top: 15px; right: 15px; z-index: 100;
+            position: absolute; top: 20px; right: 20px; z-index: 100;
         }
         .lang-switch a {
-            color: rgba(255, 255, 255, 0.85); text-decoration: none;
-            padding: 4px 12px; border: 1px solid rgba(255, 255, 255, 0.4);
-            border-radius: 4px; font-size: 12px; transition: all 0.3s;
-            background: rgba(0, 0, 0, 0.15);
+            color: rgba(255, 255, 255, 0.9); text-decoration: none;
+            padding: 6px 16px; border: 1px solid rgba(255, 255, 255, 0.5);
+            border-radius: 4px; font-size: 13px; transition: all 0.3s;
+            background: rgba(0, 0, 0, 0.2);
         }
         .lang-switch a:hover { background: white; color: #667eea; border-color: white; }
         header {
             background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
-            color: white; padding: 40px 30px; text-align: center;
+            color: white; padding: 50px 30px; text-align: center;
         }
-        header h1 { font-size: 28px; margin-bottom: 5px; }
-        .last-updated { font-size: 13px; opacity: 0.8; }
-        .content { padding: 30px; font-size: 14px; color: #444; }
-        h2 { font-size: 18px; color: #333; margin: 25px 0 10px; font-weight: bold; border-left: 4px solid #667eea; padding-left: 10px; }
-        p { margin: 10px 0; text-align: justify; }
-        footer { background: #f8f9fa; padding: 20px; text-align: center; border-top: 1px solid #e0e0e0; font-size: 13px; }
+        header h1 { font-size: 32px; margin-bottom: 10px; font-weight: 600; }
+        .last-updated { font-size: 14px; opacity: 0.9; }
+        .content { padding: 40px; font-size: 15px; color: #444; }
+        .content > p:first-child { 
+            font-size: 20px; font-weight: 600; text-align: center; 
+            margin-bottom: 30px; color: #333;
+        }
+        h2 { 
+            font-size: 20px; color: #333; margin: 35px 0 15px; 
+            font-weight: 600; border-left: 5px solid #667eea; 
+            padding-left: 15px; background: #f8f9ff; padding-top: 8px; padding-bottom: 8px;
+        }
+        h3 {
+            font-size: 17px; color: #444; margin: 25px 0 12px;
+            font-weight: 600; border-left: 3px solid #764ba2;
+            padding-left: 12px;
+        }
+        p { margin: 12px 0; line-height: 1.8; }
+        ul { margin: 15px 0; padding-left: 30px; }
+        li { margin: 8px 0; line-height: 1.8; }
+        .toc {
+            background: #f8f9fa; padding: 20px 25px; margin: 25px 0;
+            border-radius: 6px; border: 1px solid #e0e0e0;
+        }
+        .toc p { margin: 8px 0; color: #555; }
+        footer { 
+            background: #f8f9fa; padding: 25px; text-align: center; 
+            border-top: 1px solid #e0e0e0; font-size: 14px; color: #666;
+        }
         footer a { color: #667eea; text-decoration: none; margin: 0 10px; }
+        footer a:hover { text-decoration: underline; }
+        .strong { font-weight: 600; color: #333; }
+        @media (max-width: 768px) {
+            body { padding: 10px; }
+            .content { padding: 25px 20px; }
+            header h1 { font-size: 26px; }
+        }
     </style>
 </head>
 <body>
@@ -47,37 +77,178 @@
             <p class="last-updated">Updated: June 2, 2025</p>
         </header>
         <div class="content">
-            <p style="font-weight: bold; font-size: 16px; margin-bottom: 20px; text-align: center;">VIP Technology Co., Ltd. Privacy Policy</p>
+            <p>VIP Technology Co., Ltd. Privacy Policy</p>
             
-            <p>Dear users, welcome to use the Gimbal Master APP. This privacy policy can provide you with details about how we manage the personal information you disclose when using our handheld mobile phone gimbal products and services. Please take some time to familiarize yourself with our privacy practices. If you have any questions, please let us know.</p>
+            <p>Dear users, welcome to use the Gimbal Master APP. This privacy policy provides details about how we manage the personal information you disclose when using our handheld mobile phone gimbal products and services. Please take some time to familiarize yourself with our privacy practices. If you have any questions, please let us know.</p>
 
             <h2>Our Commitment to You</h2>
             <p>This privacy policy stipulates how Shenzhen VIP Technology Co., Ltd. (hereinafter referred to as "VIP" or "we") collects, uses, discloses, processes and protects the information you provide to us when using our products and services. If we require you to provide certain information to verify your identity when using our products and services, we will only use this information in strict accordance with this privacy policy and/or our user terms and conditions.</p>
+            
             <p>By using our products and services, you have read, acknowledged and accepted all the terms described in this privacy policy, including any changes we may make from time to time. We promise to comply with applicable laws (including the data protection laws of your jurisdiction) to protect the privacy, confidentiality and security of your personal information. We also promise that all our employees and agents will fulfill these obligations.</p>
+            
+            <p>Ultimately, what we hope for is to bring the best experience to our users.</p>
+
+            <div class="toc">
+                <p><span class="strong">This policy will help you understand the following:</span></p>
+                <p>1. How we collect and use your personal information</p>
+                <p>2. How we use cookies and similar technologies</p>
+                <p>3. How we share, transfer, and publicly disclose your personal information</p>
+                <p>4. How we store and protect your personal information</p>
+                <p>5. How you can manage your personal information</p>
+                <p>6. Third-party SDKs involved</p>
+                <p>7. Protection of minors' personal information</p>
+                <p>8. Notification and revision</p>
+                <p>9. Other</p>
+            </div>
 
             <h2>1. How We Collect and Use Your Personal Information</h2>
-            <p><strong>1. Categories of Information Collected</strong><br>
-            To provide you with our services, we will require you to provide personal information necessary to provide you with the services. If you do not provide personal information, we may not be able to provide you with our products or services.<br>
-            We collect the following categories of information (whether or not they constitute personal information):<br>
-            Information you provide to us or upload (including your contact information). We may collect any or all personal information you provide to us.<br>
-            Device-related information: Information related to your device. For example, device model, device firmware version number, sensor information, hardware serial number.<br>
-            Application-related information: Information related to your application. For example, software version number, client type.<br>
-            Location information (only applicable to specific services/functions): Information related to your location. For example, when searching for nearby Bluetooth devices, we need to obtain location permissions.<br>
-            Image and video information: To enable you to view and operate within the software, the photos and videos you take will be stored locally.<br>
-            Recording information: To better use video services with recording functions, the audio and video information you record will be saved to your phone card.</p>
+            
+            <h3>1.1 Categories of Information Collected</h3>
+            <p>To provide you with our services, we will require you to provide personal information necessary to provide you with the services. If you do not provide personal information, we may not be able to provide you with our products or services.</p>
+            
+            <p>We collect the following categories of information (whether or not they constitute personal information):</p>
+            <ul>
+                <li><span class="strong">Information you provide to us or upload</span> (including your contact information). We may collect any or all personal information you provide to us.</li>
+                <li><span class="strong">Device-related information:</span> Information related to your device. For example, device model, device firmware version number, sensor information, hardware serial number.</li>
+                <li><span class="strong">Application-related information:</span> Information related to your application. For example, software version number, client type.</li>
+                <li><span class="strong">Location information</span> (only applicable to specific services/functions): Information related to your location. For example, when searching for nearby Bluetooth devices, we need to obtain location permissions.</li>
+                <li><span class="strong">Image and video information:</span> To enable you to view and operate within the software, the photos and videos you take will be stored locally.</li>
+                <li><span class="strong">Recording information:</span> To better use video services with recording functions, the audio and video information you record will be saved to your phone.</li>
+            </ul>
+
+            <p>When you access our web pages through a computer, or access our mobile web pages through a mobile smart terminal, download and use our or our affiliated companies' client software to use our services, we may read information related to your device, such as Media Access Control (MAC) address, browser name and version, language, geographic location information, device manufacturer and model, device identification code, operating system, resolution, telecommunications operator, etc.</p>
+
+            <h3>1.2 How This Personal Information Will Be Used</h3>
+            <p>We may use your personal information for the following purposes:</p>
+            <ul>
+                <li>Provide, process, maintain, improve, develop our products and/or services provided to you, including after-sales service and customer support, as well as services provided through devices or websites.</li>
+                <li>Communicate with you regarding your devices, services or any general inquiries (such as updates, customer consultation support, information about our activities, notifications).</li>
+                <li>Analyze and develop statistics related to the use of our products and services to better improve our products and services.</li>
+                <li>Store and maintain information related to you for our business operations or to fulfill legal obligations.</li>
+            </ul>
+
+            <p>More details on how we use your information (which may include personal information):</p>
+            <ul>
+                <li><span class="strong">Send notifications:</span> We may from time to time use your personal information to send important notifications, such as promotional notifications about related accessory activities, user offline activity notifications, and changes to our terms, conditions and policies.</li>
+                <li><span class="strong">Provide location-based services:</span> We or third-party service providers may obtain location permissions to discover nearby Bluetooth devices to provide you with services and provide accurate locations.</li>
+                <li><span class="strong">View and manage your images and videos:</span> You can access, view and delete photos and videos taken by the APP. The photos and videos you take are only limited to local access within the VIP handheld phone gimbal software, and we do not store them.</li>
+                <li><span class="strong">Provide recording services:</span> We provide recording permission application services based on your use of the video recording function to ensure the use of the recording function.</li>
+                <li><span class="strong">Device sensors:</span> When you use our product services, we will call the device's gravity sensor to identify and determine your device status.</li>
+                <li><span class="strong">Acceleration sensor:</span> Obtain acceleration sensor information to achieve app horizontal and vertical screen switching UI effects.</li>
+            </ul>
+
+            <h3>1.3 Commitment on Collection and Use Purposes</h3>
+            <p>VIP strictly abides by the provisions of laws and regulations and the agreement with users under this policy to use the collected information for the following purposes. If we use your information beyond the following purposes, we will explain to you again and obtain your consent.</p>
+            <ul>
+                <li>(1) Review and approve the user's account registration application;</li>
+                <li>(2) Provide users with basic service functions of our platform services and software and hardware used;</li>
+                <li>(3) Through your application and answer your questions;</li>
+                <li>(4) Send you relevant information, such as changes to our service policy terms, applicable conditions and policies;</li>
+                <li>(5) Complete the survey of our products or related services you choose to participate in, or promotional and marketing activities;</li>
+                <li>(6) In order to prevent, discover, and investigate fraud, security hazards, illegal acts or acts that violate agreements, policies or rules with us or our affiliates, to protect the legitimate rights and interests of you, our other users, or us or our affiliates;</li>
+                <li>(7) For the purposes of auditing, developing new products, analyzing usage trends, improving operational efficiency and promoting promotion;</li>
+                <li>(8) Other use cases with your consent.</li>
+            </ul>
+
+            <h3>1.4 Exceptions to Collection and Use of Personal Information</h3>
+            <p>You understand and agree that in the following circumstances, we have the right to collect and use your personal information without your consent:</p>
+            <p>(1) Circumstances involving national security and national defense security;</p>
+            <p>(2) Circumstances involving public safety, public health, and major public interests;</p>
+            <p>(3) Circumstances involving criminal investigation, prosecution, trial and execution of judgment;</p>
+            <p>(4) For the purpose of maintaining the life, property and other major legal rights and interests of the personal information subject or other individuals but it is difficult to get the consent of the person;</p>
+            <p>(5) Circumstances necessary for us to perform statutory duties or obligations;</p>
+            <p>(6) Processing personal information within a reasonable range for the implementation of news reports, public opinion supervision and other acts for the public interest;</p>
+            <p>(7) The personal information involved is disclosed to the public by the personal information subject or guardian;</p>
+            <p>(8) Personal information collected from legally publicly disclosed information, such as legal news reports, government information disclosure and other channels;</p>
+            <p>(9) Necessary for signing and performing contracts according to your requirements;</p>
+            <p>(10) Necessary for maintaining the safe and stable operation of our platform services, such as discovering and handling product or service failures;</p>
+            <p>(11) Necessary for academic research institutions to carry out statistical or academic research based on public interests, and when providing results of academic research or descriptions to the outside world, de-identifying the personal information contained in the results;</p>
+            <p>(12) Other circumstances stipulated by laws and administrative regulations.</p>
+
+            <h3>1.5 Personal Information Use Rules</h3>
+            <p>(1) We will use the collected personal information to achieve our service functions according to the purposes listed in this policy;</p>
+            <p>(2) After collecting your personal information, we will de-identify the information through technical means, and the de-identified information will not be able to identify the subject. Please understand and agree that the information obtained through the aforementioned activities will be regarded as non-personal information unless required by applicable laws and regulations. We may provide partners with overall information on how users use and viewpoints provided through the software on the basis of eliminating identification information, so that our partners can understand the frequency, quantity and activities of users using the software. For the avoidance of doubt, under this clause, we will only use the information for legal purposes, and the overall information provided to partners will not point to any specific user. We may also use or share any overall information or non-identifiable information we collect with third parties for legal purposes;</p>
+            <p>(3) Please understand and agree that for all personal information you provide when using our products and/or services, unless you delete it or refuse our collection through system settings, it will be regarded as continuing to authorize our use during your use of our products and/or services. When you cancel your account, we will stop using and delete your personal information;</p>
+            <p>(4) When we want to use your personal information for other purposes not specified in this policy, or use personal information collected based on specific purposes for other purposes, we will seek your explicit consent in advance. Please understand that the products and/or platform services we provide to you will continue to update and change. If you choose to use other products and/or services not yet listed in this policy, we will explain the purpose, method and scope of information collection to you in detail through agreements, page prompts, etc. before collecting your personal information and seek your consent. If you do not agree to provide the aforementioned information, you may not be able to use the product and/or service, but it does not affect your use of existing products and/or services.</p>
+
+            <h2>2. How We Use Cookies and Similar Technologies</h2>
+            <p><span class="strong">What information is collected and how is it used:</span> VIP and third-party service providers use technologies such as cookies, tags and scripts. These technologies are used to analyze trends, manage websites, track users' website activities and collect demographic information about the entire user population. We receive individual and aggregate reports based on the use of these technologies from these companies.</p>
+
+            <p><span class="strong">Log files:</span> Like most websites, we collect certain information and save it in log files. This information may include Internet Protocol (IP) addresses, browser types, Internet Service Providers (ISPs), referral/exit pages, operating systems, date/time stamps and clickstream data. We do not link automatically collected data to other information we collect about you.</p>
+
+            <p><span class="strong">Mobile analysis:</span> In some mobile applications, we use mobile analysis software to better understand the functionality of our mobile software on your phone. This software may record information such as how often you use the application, events that occur within the application, cumulative use, performance data, and where the application crashed. We do not link the information stored in the analysis software to any personal information you submit in the mobile application.</p>
+
+            <h2>3. How We Share, Transfer, and Publicly Disclose Your Personal Information</h2>
+            <p>We will not sell any personal information to third parties.</p>
+            <p>We may sometimes disclose your personal information to third parties to provide products or services you request.</p>
+            <p>We may make disclosures to third-party service providers and affiliates listed in this section below. In all cases described in this section, you can rest assured that VIP will only share your personal information based on your authorization. You should understand that in any of the circumstances described below, when VIP shares your personal information with third-party service providers, VIP will stipulate the third party's practices and obligations through contracts to comply with applicable local data protection laws. VIP will guarantee through contracts that third-party service providers comply with the privacy standards applicable to them in your jurisdiction.</p>
+
+            <h3>3.1 Sharing Information with Others</h3>
+            <p>When required by applicable law, VIP may disclose your personal information without further consent.</p>
+
+            <h3>3.2 Information Not Requiring Consent</h3>
+            <p>We may share anonymous information with third parties (such as advertisers on our website) in aggregate form for commercial purposes; we may share general usage trends of our services with them, such as the number of customers in a specific group of people purchasing certain products or engaging in certain transactions.</p>
+            <p>For the avoidance of doubt, VIP may collect, use or disclose your personal information without your consent when and to the extent explicitly permitted by local data protection laws (for example, to follow a subpoena), and when we may believe in good faith that disclosure is necessary to protect our rights, protect your safety or the safety of others, to investigate fraud or to respond to a government request.</p>
+
+            <h2>4. How We Store and Protect Your Personal Information</h2>
+            <h3>4.1 VIP's Security Measures</h3>
+            <p>We are committed to ensuring the security of your personal information. To prevent unauthorized access, disclosure or other similar risks, we have implemented reasonable physical, electronic and management process measures to protect the information we collect from your products and VIP websites. We will take all reasonable steps to protect your personal information.</p>
+            <p>All your personal information is stored on secure servers and protected in controlled facilities. We classify your data based on its importance and sensitivity, and guarantee that your personal information has the highest security level. We guarantee that employees and third-party service providers who access this information to help provide you with products and services have strict contractual confidentiality obligations. If they fail to fulfill these obligations, they will be subject to disciplinary action or terminated. In short, we regularly review information collection, storage and processing practices, including physical security measures, to prevent any unauthorized access and use.</p>
+            <p>We will take all feasible measures to protect your personal information. However, you should be aware that the use of the Internet is not always secure, therefore, we cannot guarantee the security or integrity of any personal information when transmitted in both directions over the Internet.</p>
+
+            <h3>4.2 What You Need to Do</h3>
+            <p>You can play a role in protecting the security of your personal information by not disclosing your login password or account information to anyone (unless this person is formally authorized by you). VIP is not responsible for security loopholes caused by third-party access to your personal information resulting from your failure to maintain the privacy of your personal information. Notwithstanding the above provisions, if any unauthorized use of your account by other users of the Internet or any other security breach occurs, you must notify us immediately. Your assistance will help us protect the privacy of your personal information.</p>
+
+            <h3>4.3 Retention Policy</h3>
+            <p>We will retain personal information as long as necessary to achieve the purpose of collecting information, or to comply with applicable legal requirements or permissions. As long as it can be reasonably inferred that retaining personal information cannot achieve the purpose of collecting personal information, and it is no longer necessary to retain information for legal, dispute resolution, enforcement of our agreements or other commercial purposes, we will no longer retain personal information, or will eliminate the means of associating personal information with a specific person.</p>
+
+            <h2>5. How You Can Manage Your Personal Information</h2>
+            <p>VIP acknowledges that everyone's concerns about privacy vary. Therefore, we provide various ways for you to choose to limit the collection, use, disclosure or processing of your personal information, and to control your privacy settings:</p>
+            <ul>
+                <li>Turn location services on or off;</li>
+                <li>Turn on or off read and write storage of albums;</li>
+                <li>Turn camera, microphone, Bluetooth, location permissions on or off;</li>
+                <li>Log in or log out of your VIP account.</li>
+            </ul>
+
+            <h3>5.1 Access, Update or Correct Your Personal Information</h3>
+            <p>You have the right to request access to and/or correction of any personal information we hold about you. When you update your personal information, we will ask you to verify your identity before we process your request. Once we have sufficient information to process your request to access or correct your personal information, we will respond to your request within the time stipulated by applicable data protection laws. We usually provide these services free of charge, but reserve the right to charge a reasonable fee for your data access requests. For more details related to personal information in your VIP account, you can access and change it by logging into your account through your device.</p>
+
+            <h3>5.2 Withdrawal of Consent</h3>
+            <p>You can withdraw your consent to collect, use and/or disclose your personal information in our possession or control by submitting a request. We will process your request within a reasonable time after you make the request, and will no longer collect, use and/or disclose your personal information according to your request. Please note that withdrawing your consent will lead to certain legal consequences. Depending on the extent to which you withdraw your consent for us to process your personal information, this may mean that you cannot enjoy VIP's products and services.</p>
+
+            <h3>5.3 Transfer of Personal Information Outside Your Jurisdiction</h3>
+            <p>If we need to transfer personal information outside your jurisdiction, whether to our affiliates or third-party service providers, we will notify you sufficiently and obtain your authorization in accordance with applicable laws. By implementing appropriate security measures, we guarantee that all such transfers meet the requirements of applicable local data protection laws and will not change our commitment to comply with this privacy policy to protect your personal information.</p>
+
+            <h3>5.4 Personal Information Subject Account Deletion</h3>
+            <p>After a user uses the account deletion function, the function takes effect immediately. After deleting the account, we will stop providing products or services to you and, at your request, delete your personal information, unless otherwise provided by laws and regulations.</p>
 
             <h2>6. Third-Party SDKs Involved</h2>
-            <p>To provide and optimize our services, our App has integrated third-party SDKs. While these third-party SDKs cooperate with us to provide you with more comprehensive services, they may collect your personal information. The purpose of collecting this information is to improve the services we provide to you.</p>
-            <p><strong>Tencent Bugly</strong><br>
-            Official website link: https://bugly.qq.com/v2/<br>
-            Purpose of use: APP crash information monitoring<br>
-            Types of information collected: Log information (including: third-party developer custom logs, Logcat logs and APP crash stack information), device ID (including: android_id, idfV, iccid), hardware serial number, network connection information, system name, system version and country code, obtain installed APP information.</p>
+            <p>To provide and optimize our services, our App has integrated third-party SDKs. These SDKs may collect your personal information to improve our services.</p>
+            <ul>
+                <li>We may include statistical data generated when you use specific services (such as anonymous device-related information, daily active events, page access events, page access duration events, session events).</li>
+                <li>Network monitoring data such as request duration, request and error request counts, etc.</li>
+                <li>Application crash events (such as logs automatically generated after the application crashes).</li>
+            </ul>
+            <p>If you are a user of our APP, the following SDKs will actively collect your personal information. SDKs not listed below will not collect your personal information:</p>
+            
+            <h3>Tencent Bugly</h3>
+            <p><span class="strong">Official website:</span> <a href="https://bugly.qq.com/v2/" target="_blank" style="color: #667eea;">https://bugly.qq.com/v2/</a></p>
+            <p><span class="strong">Purpose:</span> APP crash information monitoring</p>
+            <p><span class="strong">Information collected:</span> Log information (including third-party developer custom logs, Logcat logs and APP crash stack information), device ID (including android_id, idfv, iccid), hardware serial number, network connection information, system name, system version and country code, and obtaining installed APP information.</p>
+            <p><span class="strong">Privacy Policy:</span> <a href="https://bugly.qq.com/v2/contract" target="_blank" style="color: #667eea;">https://bugly.qq.com/v2/contract</a></p>
+
+            <h2>7. Protection of Minors' Personal Information</h2>
+            <p>We believe it is the parents' responsibility to supervise their children's use of our products and services. However, our policy does not require obtaining personal information of minors, or sending any promotional materials to such people. VIP will not seek or attempt to seek to receive any personal information from minors. If a parent or guardian has reason to believe that a minor has submitted personal information to VIP without their prior consent, please contact us to ensure the deletion of such personal information and guarantee that the minor unsubscribes from any applicable VIP services.</p>
+
+            <h2>8. Notification and Revision</h2>
+            <p>We will regularly review the privacy policy and may update it to reflect changes in our information practices. If we make significant changes to this privacy policy, we will notify you by email (sent to the email address specified in your account) or by publishing announcements on all VIP websites or through mobile devices, so you can understand the information we collect and how we use it. Such changes will apply from the effective date specified in the notification or on the website. We suggest you regularly review this page for the latest information on our privacy practices. Your continued use of products and websites, services on mobile phones and/or any other devices will be deemed as acceptance of the updated privacy policy. When we collect more personal information from you or we wish to use or disclose your personal information for new purposes, we will seek your consent again.</p>
 
             <h2>9. Other</h2>
-            <p>Shenzhen VIP Technology Co., Ltd.<br>
-            Address: No. 2 Tengfeng Third Road, Bao'an District, Shenzhen, Guangdong Province<br>
-            Thank you for taking the time to learn about our privacy policy!<br>
-            Date: June 2, 2025</p>
+            <p><span class="strong">Shenzhen VIP Technology Co., Ltd.</span></p>
+            <p><span class="strong">Address:</span> No. 2 Tengfeng Third Road, Bao'an District, Shenzhen, Guangdong Province</p>
+            <p>Thank you for taking the time to learn about our privacy policy!</p>
+            <p><span class="strong">Date:</span> June 2, 2025</p>
         </div>
         <footer>
             <p>© 2026 Shenzhen VIP Technology Co., Ltd. All Rights Reserved.</p>
