@@ -1,7 +1,7 @@
 #!/usr/bin/expect -f
-# 协议站点独立部署脚本
-# 只部署 policy/ 目录下的文件到 dualistic-polarities.com
-# 不会影响主站 szvip.vip
+# iGimbal Google Play 协议站点独立部署脚本
+# 仅将仓库下 igimbal/ 子目录中的协议文件同步到 dualistic-polarities.com
+# 大陆版协议（仓库根目录）不会被部署到本域名，需另行处理。
 # 使用方法：./deploy-policy.sh
 
 set timeout 300
@@ -9,18 +9,15 @@ set server_ip "8.135.238.203"
 set server_user "root"
 set server_pass "ZchTristan.123"
 set policy_remote_path "/var/www/dualistic-polarities.com"
-set local_path "/Users/zengchanghuan/Desktop/workspace/szvip-policy"
+set local_path "/Users/zengchanghuan/Desktop/workspace/szvip-policy/igimbal"
 
-puts "\n🚀 协议站点独立部署脚本"
-puts "目标：dualistic-polarities.com\n"
+puts "\n🚀 iGimbal 协议站点部署脚本"
+puts "本地源目录：$local_path/"
+puts "目标域名：dualistic-polarities.com\n"
 
-# 1. 上传协议文件
-puts "📦 正在上传协议文件到 $policy_remote_path...\n"
+# 1. 上传协议文件（仅 igimbal/ 下的内容）
+puts "📦 正在上传 igimbal/ 下的协议文件到 $policy_remote_path...\n"
 spawn rsync -avz --progress --delete \
-    --exclude=backup/ \
-    --exclude=*.md \
-    --exclude=.* \
-    --exclude=deploy*.sh \
     $local_path/ \
     $server_user@$server_ip:$policy_remote_path/
 
@@ -43,13 +40,7 @@ expect {
     eof
 }
 
-puts "\n✅ 协议站点部署完成！\n"
-puts "🌐 访问链接："
-puts "  【Google Play / 主版本】"
-puts "  英文隐私政策：https://dualistic-polarities.com/privacy-policy-en.html"
-puts "  中文隐私政策：https://dualistic-polarities.com/privacy-policy-cn.html"
-puts "\n  【中国大陆版（备查）】"
-puts "  中文隐私政策：https://dualistic-polarities.com/mainland/privacy-policy-cn.html"
-puts "  英文隐私政策：https://dualistic-polarities.com/mainland/privacy-policy-en.html"
-puts "  中文用户协议：https://dualistic-polarities.com/mainland/user-agreement-cn.html"
-puts "  英文用户协议：https://dualistic-polarities.com/mainland/user-agreement-en.html\n"
+puts "\n✅ iGimbal 协议站点部署完成！\n"
+puts "🌐 访问链接（iGimbal · Google Play）："
+puts "  英文隐私政策（建议填 Play Console）：https://dualistic-polarities.com/privacy-policy-en.html"
+puts "  中文隐私政策：https://dualistic-polarities.com/privacy-policy-cn.html\n"

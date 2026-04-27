@@ -2,11 +2,11 @@
 
 ## 用途
 
-本仓库中的 **`./deploy-privacy-to-ec2.sh`** 仅用于将 **Google Play 版 Gimbal Master 应用的隐私政策** 部署到 **AWS EC2** 上的公网地址，供应用商店与用户访问。
+本仓库中的 **`./deploy-privacy-to-ec2.sh`** 仅用于将 **iGimbal（Google Play）应用的隐私政策** 部署到 **AWS EC2** 上的公网地址，供应用商店与用户访问。
 
 - **部署目标**：AWS EC2（当前为 `https://privacy.veryplace.net`）
-- **协议适用范围**：Google Play 上架的 Gimbal Master 应用对应的隐私政策（英文版）
-- **源文件**：`privacy-policy-en.html`（iGimbal Google Play 主版本）
+- **协议适用范围**：Google Play 上架的 iGimbal 应用对应的隐私政策（英文版）
+- **源文件**：`igimbal/privacy-policy-en.html`（iGimbal Google Play 主版本）
 
 该脚本不涉及其他平台或其它协议文件的部署。
 
@@ -35,7 +35,7 @@
 
 ## 日常更新流程
 
-1. 在本地修改 `privacy-policy-en.html`（如更新日期、条款内容）。
+1. 在本地修改 `igimbal/privacy-policy-en.html`（如更新日期、条款内容）。
 2. 在项目根目录执行：
    ```bash
    ./deploy-privacy-to-ec2.sh
@@ -51,7 +51,7 @@
 | `EC2_KEY_PATH` | EC2 密钥（.pem）路径 | 需在 `.ec2-deploy.env` 中配置 |
 | `EC2_HOST` | EC2 公网 IP | 3.137.52.189 |
 | `EC2_USER` | SSH 用户名 | ubuntu |
-| `PRIVACY_HTML` | 本地协议 HTML 路径 | 当前目录下 `privacy-policy-en.html` |
+| `PRIVACY_HTML` | 本地协议 HTML 路径 | 当前目录下 `igimbal/privacy-policy-en.html` |
 
 可通过环境变量覆盖，例如：
 ```bash
