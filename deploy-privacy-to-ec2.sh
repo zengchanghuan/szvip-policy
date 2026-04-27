@@ -9,7 +9,7 @@ SCRIPT_DIR="$(cd "$(dirname "${BASH_SOURCE[0]}")" && pwd)"
 # ---------- 配置（按需修改）----------
 EC2_HOST="${EC2_HOST:-3.137.52.189}"
 EC2_USER="${EC2_USER:-ubuntu}"
-PRIVACY_HTML="${PRIVACY_HTML:-${SCRIPT_DIR}/privacy-policy-googleplay-en.html}"
+PRIVACY_HTML="${PRIVACY_HTML:-${SCRIPT_DIR}/privacy-policy-en.html}"
 REMOTE_PATH="/var/www/html/privacy/index.html"
 
 # 密钥：优先用环境变量，其次用同目录下的 .ec2-deploy.env
@@ -37,7 +37,7 @@ else
 fi
 
 REMOTE="${EC2_USER}@${EC2_HOST}"
-TMP_FILE="privacy-policy-googleplay-en.html"
+TMP_FILE="privacy-policy-en.html"
 
 echo ">>> 上传 $PRIVACY_HTML 到 ${REMOTE} ..."
 scp "${SSH_OPTS[@]}" "$PRIVACY_HTML" "${REMOTE}:~/${TMP_FILE}"
