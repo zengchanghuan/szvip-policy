@@ -7,7 +7,7 @@ set timeout 60
 set server_ip   "8.135.238.203"
 set server_user "root"
 set server_pass "ZchTristan.123"
-set remote_path "/var/www/policy"
+set remote_path "/var/www/szvip"
 set local_path  [file dirname [file normalize [info script]]]
 
 puts "\n部署目标：$server_user@$server_ip:$remote_path"
@@ -38,8 +38,8 @@ expect {
 }
 
 puts "\n部署完成！\n"
-puts "  https://policy.szvip.vip/privacy.html"
-puts "  https://policy.szvip.vip/privacy-policy-cn.html"
-puts "  https://policy.szvip.vip/privacy-policy-en.html"
-puts "  https://policy.szvip.vip/user-agreement-cn.html"
-puts "  https://policy.szvip.vip/user-agreement-en.html\n"
+puts "  https://szvip.vip/privacy.html"
+puts "  https://szvip.vip/privacy-policy-cn.html"
+puts "  https://szvip.vip/privacy-policy-en.html"
+puts "  https://szvip.vip/user-agreement-cn.html"
+puts "  https://szvip.vip/user-agreement-en.html\n"
