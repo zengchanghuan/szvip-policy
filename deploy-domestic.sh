@@ -1,36 +1,31 @@
-#!/usr/bin/expect -f
+#!/bin/bash
 # szvip.vip 国内隐私政策 一键部署脚本
 # 使用方法：./deploy-domestic.sh
 
-set timeout 60
-set server_ip   "8.135.238.203"
-set server_user "root"
-set server_pass "ZchTristan.123"
-set remote_path "/var/www/szvip"
-set local_path  [file dirname [file normalize [info script]]]
+# 读取密码配置
+LOCAL_PATH="$(cd "$(dirname "${BASH_SOURCE[0]}")" && pwd)"
+if [ -f "$LOCAL_PATH/.deploy.env" ]; then
+    source "$LOCAL_PATH/.deploy.env"
+else
+    echo "错误：找不到 .deploy.env 文件，请先配置 SERVER_PASS"
+    exit 1
+fi
 
-puts "\n-- 国内版 -- 部署目标：$server_user@$server_ip:$remote_path"
+export SSHPASS="$SERVER_PASS"
+SERVER_IP="8.135.238.203"
+SERVER_USER="root"
+REMOTE_PATH="/var/www/szvip"
 
-# 1. 上传文件
-puts "\n上传协议文件..."
-spawn rsync -avz --progress \
-    $local_path/privacy.html \
-    $server_user@$server_ip:$remote_path/
+echo -e "\n-- 国内版 -- 部署目标：${SERVER_USER}@${SERVER_IP}:${REMOTE_PATH}"
 
-expect {
-    "password:" { send "$server_pass\r"; exp_continue }
-    eof
-}
+echo -e "\n上传协议文件..."
+sshpass -e rsync -avz --progress \
+    -e "ssh -o StrictHostKeyChecking=no" \
+    "$LOCAL_PATH/privacy.html" \
+    "${SERVER_USER}@${SERVER_IP}:${REMOTE_PATH}/"
 
-# 2. 设置权限并重载 Nginx
-puts "\n设置权限并重载 Nginx..."
-spawn ssh $server_user@$server_ip \
-    "chown -R nginx:nginx $remote_path && chmod -R 755 $remote_path && systemctl reload nginx && echo 'nginx reloaded'"
+echo -e "\n设置权限并重载 Nginx..."
+sshpass -e ssh -o StrictHostKeyChecking=no "${SERVER_USER}@${SERVER_IP}" \
+    "chown -R nginx:nginx ${REMOTE_PATH} && chmod -R 755 ${REMOTE_PATH} && systemctl reload nginx && echo 'nginx reloaded'"
 
-expect {
-    "password:" { send "$server_pass\r"; exp_continue }
-    eof
-}
-
-puts "\n部署完成！\n"
-puts "  国内版隐私政策: https://szvip.vip/privacy.html\n"
+echo -e "\n部署完成！\n  国内版隐私政策: https://szvip.vip/privacy.html\n"
