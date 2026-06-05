@@ -1,7 +1,6 @@
 #!/usr/bin/expect -f
-# policy.szvip.vip 一键部署脚本
-# 将根目录协议文件同步到服务器，并重载 Nginx
-# 使用方法：./deploy.sh
+# szvip.vip 国内隐私政策 一键部署脚本
+# 使用方法：./deploy-domestic.sh
 
 set timeout 60
 set server_ip   "8.135.238.203"
@@ -10,16 +9,12 @@ set server_pass "ZchTristan.123"
 set remote_path "/var/www/szvip"
 set local_path  [file dirname [file normalize [info script]]]
 
-puts "\n部署目标：$server_user@$server_ip:$remote_path"
+puts "\n-- 国内版 -- 部署目标：$server_user@$server_ip:$remote_path"
 
 # 1. 上传文件
 puts "\n上传协议文件..."
 spawn rsync -avz --progress \
     $local_path/privacy.html \
-    $local_path/privacy-policy-cn.html \
-    $local_path/privacy-policy-en.html \
-    $local_path/user-agreement-cn.html \
-    $local_path/user-agreement-en.html \
     $server_user@$server_ip:$remote_path/
 
 expect {
@@ -38,8 +33,4 @@ expect {
 }
 
 puts "\n部署完成！\n"
-puts "  https://szvip.vip/privacy.html"
-puts "  https://szvip.vip/privacy-policy-cn.html"
-puts "  https://szvip.vip/privacy-policy-en.html"
-puts "  https://szvip.vip/user-agreement-cn.html"
-puts "  https://szvip.vip/user-agreement-en.html\n"
+puts "  国内版隐私政策: https://szvip.vip/privacy.html\n"
