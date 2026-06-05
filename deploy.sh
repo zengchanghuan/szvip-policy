@@ -15,6 +15,7 @@ puts "\n部署目标：$server_user@$server_ip:$remote_path"
 # 1. 上传文件
 puts "\n上传协议文件..."
 spawn rsync -avz --progress \
+    $local_path/privacy.html \
     $local_path/privacy-policy-cn.html \
     $local_path/privacy-policy-en.html \
     $local_path/user-agreement-cn.html \
@@ -37,6 +38,7 @@ expect {
 }
 
 puts "\n部署完成！\n"
+puts "  https://policy.szvip.vip/privacy.html"
 puts "  https://policy.szvip.vip/privacy-policy-cn.html"
 puts "  https://policy.szvip.vip/privacy-policy-en.html"
 puts "  https://policy.szvip.vip/user-agreement-cn.html"
