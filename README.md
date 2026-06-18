@@ -3,7 +3,7 @@
 ## 模块职责
 本仓库托管两套相互独立的协议：
 
-- **大陆版**（威尔派科技 / Gimbal Master）：在仓库根目录，**不部署到 dualistic-polarities.com**，需要时另行部署到大陆侧域名（如 szvip.vip）。
+- **大陆版**（威尔派科技 / Gimbal View）：在仓库根目录，**不部署到 dualistic-polarities.com**，需要时另行部署到大陆侧域名（如 szvip.vip）。
 - **iGimbal 国际版**（Dualistic Polarities, LLC / Google Play）：放在 `igimbal/` 子目录，由 `deploy-policy.sh` 部署到 dualistic-polarities.com。
 
 两套协议互不影响，可独立维护。
